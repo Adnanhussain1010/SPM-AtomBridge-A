@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spm-atombridge"
+version = "0.0.1"
+description = "Unified environment for defect-to-spectroscopy analysis across DFT, LAMMPS, and SPM"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "ase",
+    "pymatgen",
+]
+
+[project.optional-dependencies]
+bader     = ["baderkit"]
+ovito     = ["ovito"]
+kpfm      = ["ppafm"]
+spm       = ["AFMReader"]
+transport = ["sisl"]
+plotting  = ["sumo"]
+dev       = ["pytest", "ruff", "black"]
+
+[tool.setuptools.packages.find]
+include = ["spm_atombridge*"]
+
+[tool.pytest.ini_options]
+testpaths = ["spm_atombridge/tests"]

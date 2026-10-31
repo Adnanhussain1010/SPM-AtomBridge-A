@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: spm-atombridge
+Version: 0.0.1
+Summary: Unified environment for defect-to-spectroscopy analysis across DFT, LAMMPS, and SPM
+Requires-Python: >=3.10
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: ase
+Requires-Dist: pymatgen
+Provides-Extra: bader
+Requires-Dist: baderkit; extra == "bader"
+Provides-Extra: ovito
+Requires-Dist: ovito; extra == "ovito"
+Provides-Extra: kpfm
+Requires-Dist: ppafm; extra == "kpfm"
+Provides-Extra: spm
+Requires-Dist: AFMReader; extra == "spm"
+Provides-Extra: transport
+Requires-Dist: sisl; extra == "transport"
+Provides-Extra: plotting
+Requires-Dist: sumo; extra == "plotting"
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: black; extra == "dev"
